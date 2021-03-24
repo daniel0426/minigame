@@ -1,0 +1,114 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+body{
+    background-color: #c5e3f6;
+}
+.gameTitle{
+    text-align: center;
+    padding-top: 1em;
+    font-size: 2.5em;
+    color: #303a52;
+}
+.game{
+    display:flex;
+    flex-direction:column;
+    width: 800px;
+    height: 50vh;
+    margin:5em auto;
+    background:url("../img/background.png") no-repeat;
+    background-size:100% 100%;
+    border-radius:10px;
+    border: 3px solid #000;
+    .game__header {
+        padding: 2em ;
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content: center;
+        
+       width: 50%;
+       margin:0 auto;
+        .playBtn {
+            cursor:pointer;
+            font-size: 1.3em;
+            background:beige;
+            padding: 0.4em;
+            transition:0.15s;
+            &:hover {
+                background:#303a52;
+                color: white;
+                
+            }
+        }
+        .timer {
+            margin:1em;
+            padding: 0.3em 2em;
+            border: 3px solid black;
+            background-color: #fff;
+            border-radius:5px;
+            font-size:1.2em;
+        }
+        .carrotNums {
+            font-size: 1.6em;
+            background-color: lightsalmon;
+            padding: 0.2em;
+            color:#fff;
+            border-radius:50%;
+            border: 2px solid black;
+        }
+
+
+    }
+    .game__field{
+        
+        border: 3px solid blue;
+        width: 100%;
+        height: 100%;
+        .carrotImg,.bugImg {
+            
+            cursor:pointer;
+            transition: all 0.15s ;
+            &:hover {
+                transform:scale(1.05)
+            }
+        }
+       
+    }
+
+}
+
+.pop-up {
+    display:block;
+    &.hide{
+        display:none;
+    }
+    transform:translateY(-200%);
+    border-radius: 15px;
+    width: 400px;
+    padding: 1.5em;
+    margin: 0 auto;
+    display:flex;
+    flex-direction: column;
+    border: 1px solid black;
+    background:#1e626280;
+    align-items: center;
+    .pop-up__refresh {
+        padding: 0.4em;
+        font-size: 1.3em;
+        background:beige;
+        cursor:pointer;
+        transition:all 0.2s ease;
+        &:hover {
+            background:#303a52;
+                color: white;
+        }
+    }   
+    .pop-up__message {
+        font-size:1.4em;
+        margin-top: 0.7em;
+        color:#fff;
+    }
+}
